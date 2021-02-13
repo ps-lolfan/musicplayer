@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useState } from "react";
+import Player from "./components/Player";
 function App() {
+  const [songs, setSongs] = useState([
+    {
+      title: "Forget me",
+      artist: "Praveen Sinnur",
+      img_src: "./images/img1.jpg",
+      src: "./images/img1.jpg",
+    },
+    {
+      title: "Song 2",
+      artist: "Praveen Sinnur",
+      img_src: "./images/img1.jpg",
+      src: "./images/img1.jpg",
+    },
+  ]);
+
+  const [currentSongIndex, setCurrentSongIndex] = useState(0);
+  const [nextSongIndex, setNextSongIndex] = useState(currentSongIndex + 1);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Player song={songs[currentSongIndex]} nextSong={songs[nextSongIndex]} />
     </div>
   );
 }
