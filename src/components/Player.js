@@ -43,7 +43,8 @@ function Player(props) {
         src={props.songs[props.currentSongIndex].src}
         ref={audioEl}
       ></audio>
-      <h4>Playing now</h4>
+      <h3>MUSIC IS MAGIC</h3>
+
       <PlayerDetails song={props.songs[props.currentSongIndex]} />
       <PlayerControls
         isPlaying={isPlaying}
@@ -57,8 +58,17 @@ function Player(props) {
       <h5>
         <strong>
           Happy listening
-          <img src="./images/heart-solid.svg" height="10" width="20"></img>
-          Praveen Sinnur
+          <img src="./images/heart-solid.svg" height="10" width="20" />
+          <a
+            href="https://github.com/ps-lolfan"
+            target="_blank"
+            style={{
+              textDecoration: "none",
+              color: "inherit",
+            }}
+          >
+            Praveen Sinnur
+          </a>
         </strong>
       </h5>
     </div>

@@ -3,27 +3,27 @@ import Player from "./components/Player";
 function App() {
   const [songs] = useState([
     {
-      title: "Boro Boro",
-      artist: "Some @rti$t",
+      title: "Bad Guy",
+      artist: "Billie Eilish",
       img_src: "./images/billi.jpg",
-      src: "./music/boroboro.mp3",
+      src: "./music/badguy.mp3",
     },
     {
       title: "All Apologies",
       artist: "Kurt Cobian",
-      img_src: "./images/img2.jpg",
+      img_src: "./images/kurt.jpg",
       src: "./music/allapp.mp3",
     },
     {
-      title: "Boro Boro",
-      artist: "Some @rti$t",
+      title: "Bad Guy",
+      artist: "Billie Eilish",
       img_src: "./images/billi.jpg",
-      src: "./music/boroboro.mp3",
+      src: "./music/badguy.mp3",
     },
     {
       title: "All Apologies",
       artist: "Kurt Cobian",
-      img_src: "./images/img2.jpg",
+      img_src: "./images/kurt.jpg",
       src: "./music/allapp.mp3",
     },
   ]);
@@ -43,7 +43,6 @@ function App() {
 
   return (
     <div className="App">
-      {console.log(typeof songs)}
       <Player
         currentSongIndex={currentSongIndex}
         setCurrentSongIndex={setCurrentSongIndex}

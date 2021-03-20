@@ -10,7 +10,6 @@ import {
 function PlayerControls(props) {
   return (
     <div className="c-player--controls">
-      {console.log(props)}
       <button className="skip-btn" onClick={() => props.SkipSong(false)}>
         <FontAwesomeIcon icon={faBackward} />
       </button>
