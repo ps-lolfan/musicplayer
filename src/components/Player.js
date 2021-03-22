@@ -5,6 +5,7 @@ import PlayerControls from "./PlayerControls";
 function Player(props) {
   const audioEl = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [randomNumber, setRandomNumber] = useState("ff5050");
 
   useEffect(() => {
     if (isPlaying) {
@@ -12,7 +13,18 @@ function Player(props) {
     } else {
       audioEl.current.pause();
     }
-  });
+    setInterval(() => {
+      var letters = "0123456789ABCDEF";
+      var color = "";
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      setRandomNumber(color);
+    }, 2000);
+    return () => {
+      clearInterval();
+    };
+  }, []);
 
   const SkipSong = (forwards = true) => {
     if (forwards) {
@@ -38,7 +50,15 @@ function Player(props) {
     }
   };
   return (
-    <div className="c-player">
+    <div
+      className="c-player"
+      style={{
+        background: `linear-gradient(to bottom, #${randomNumber} 0%, #000000 100%)`,
+        webkitTransition: "background-color 1000ms linear",
+        msTransition: "background-color 1000ms linear",
+        transition: "background-color 1000ms linear",
+      }}
+    >
       <audio
         src={props.songs[props.currentSongIndex].src}
         ref={audioEl}
