@@ -13,6 +13,10 @@ function Player(props) {
     } else {
       audioEl.current.pause();
     }
+  });
+
+  //useeffect to change color with randomizer
+  useEffect(() => {
     setInterval(() => {
       var letters = "0123456789ABCDEF";
       var color = "";
