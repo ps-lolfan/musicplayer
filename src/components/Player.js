@@ -58,9 +58,9 @@ function Player(props) {
       className="c-player"
       style={{
         background: `linear-gradient(to bottom, #${randomNumber} 0%, #000000 100%)`,
-        webkitTransition: "background-color 1000ms linear",
-        msTransition: "background-color 1000ms linear",
-        transition: "background-color 1000ms linear",
+        // WebkitTransition: "background-color 500ms linear",
+        // msTransition: "background-color 1000ms linear",
+        // transition: "background-color 1000ms linear",
       }}
     >
       <audio

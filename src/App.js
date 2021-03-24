@@ -1,6 +1,15 @@
 import { useState, useEffect } from "react";
 import Player from "./components/Player";
+import { useQuery } from "@apollo/react-hooks";
+
+import { FETCH_ALL_SONGS } from "./utils/graphql";
 function App() {
+  const { loading, data } = useQuery(FETCH_ALL_SONGS);
+
+  if (data) {
+    console.log("all songs", data.getSongs);
+  }
+
   const [songs] = useState([
     {
       title: "Bad Guy",
