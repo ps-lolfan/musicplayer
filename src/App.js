@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Player from "./components/Player";
+import FileUploader from "./components/FileUploader";
 // import { useQuery } from "@apollo/react-hooks";
 
 // import { FETCH_ALL_SONGS } from "./utils/graphql";
@@ -52,12 +53,13 @@ function App() {
 
   return (
     <div className="App">
-      <Player
+      {/* <Player
         currentSongIndex={currentSongIndex}
         setCurrentSongIndex={setCurrentSongIndex}
         nextSongIndex={nextSongIndex}
         songs={songs}
-      />
+      /> */}
+      <FileUploader />
     </div>
   );
 }

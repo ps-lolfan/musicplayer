@@ -11,3 +11,13 @@ export const FETCH_ALL_SONGS = gql`
     }
   }
 `;
+
+export const SAVE_FILE_DATA = gql`
+  {
+    saveFileData {
+      id
+      fileName
+      url
+    }
+  }
+`;
